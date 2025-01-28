@@ -1,0 +1,272 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #e2c49b;
+}
+  
+header {
+  text-align: center;
+  background-color: #ddb275; 
+  color: #fff;
+  padding: 20px;
+}
+  
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+  
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+  
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10;
+}
+  
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Slide animations */
+section {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-left {
+  transform: translateX(-100%);
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+}
+
+.slide-out-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-out-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+
+/* Home Section */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+  
+.home-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  gap: 2rem;
+  text-align: left;
+}
+  
+.home-image img {
+  width: 400px;
+  height: auto;
+}
+  
+.home-text {
+  max-width: 600px;
+  color: #555;
+}
+  
+.home-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+  
+.home-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* About Me Section */
+.about-section {
+  padding: 2rem;
+  text-align: center;
+}
+  
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+  
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+  
+.about-content .about-text {
+  max-width: 600px;
+  text-align: justify;
+  color: #555;
+}
+  
+.about-content .about-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.project h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.project-description {
+  max-width: 600px;
+  text-align: justify;
+  color: #555;
+}
+
+.project-description h3 {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.project-description p {
+  margin-bottom: 1rem;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+.project-video video {
+  width: 750px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .project-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .project-video video {
+    margin-left: 1.5rem;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Social Media */
+.social-media ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-media ul li {
+  margin: 1rem 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+
+/* Hover Effects for Social Links */
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .social-media ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+  
