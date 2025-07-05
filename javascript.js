@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentPageIndex = pageOrder.indexOf(currentPage);
       const targetPageIndex = pageOrder.indexOf(targetPage);
 
+      // Remove 'active' class from all nav links
+      navLinks.forEach(l => l.classList.remove('active'));
+      // Add 'active' class to the clicked nav link
+      link.classList.add('active');
+
       if (currentPageIndex !== targetPageIndex) {
         const isNext = targetPageIndex > currentPageIndex;
         currentSection.classList.add(isNext ? 'slide-out-left' : 'slide-out-right');
