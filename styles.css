@@ -34,36 +34,58 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Slide animations */
+/* --- SPA Section Slide Only (No Opacity) --- */
 section {
-  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background: transparent;
+  z-index: 1;
   transform: translateX(100%);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 1s cubic-bezier(0.77,0,0.175,1);
+  pointer-events: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 section.active {
-  opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0%);
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
-
-.slide-in-left {
-  transform: translateX(-100%);
-}
-
-.slide-in-right {
-  transform: translateX(100%);
-}
-
 .slide-out-left {
   transform: translateX(-100%);
-  opacity: 0;
 }
-
 .slide-out-right {
   transform: translateX(100%);
-  opacity: 0;
 }
 
+/* Slide In Effects for Both Directions */
+section.slide-in-right {
+  animation: slideInFromRight 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+section.slide-in-left {
+  animation: slideInFromLeft 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 
 /* Home Section */
 .home-section {
@@ -207,6 +229,16 @@ section.active {
   }
 }
 
+@media (max-width: 900px) {
+  .project-video video {
+    width: 100%;
+    max-width: 350px;
+  }
+  .home-image img {
+    width: 200px;
+  }
+}
+
 /* Contact Section */
 .contact-section {
   padding: 2rem;
@@ -269,4 +301,15 @@ section.active {
   }
 }
 
-  
+body {
+  overflow-x: hidden;
+}
+
+section.projects-section {
+  /* Remove min-height and centering for projects page */
+  min-height: unset;
+  display: block;
+  justify-content: unset;
+  flex-direction: unset;
+}
+
