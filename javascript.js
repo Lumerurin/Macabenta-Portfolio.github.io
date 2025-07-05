@@ -68,3 +68,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// --- Project Pop-up Animation on Scroll ---
+function animateProjectsOnScroll() {
+  const projectEls = document.querySelectorAll('.projects-section .project');
+  projectEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('pop-in');
+    } else {
+      el.classList.remove('pop-in');
+    }
+  });
+}
+
+// Only animate when projects section is visible
+function handleProjectSectionAnimation() {
+  const projectsSection = document.querySelector('.projects-section');
+  if (projectsSection && projectsSection.style.display !== 'none') {
+    animateProjectsOnScroll();
+  }
+}
+
+window.addEventListener('scroll', handleProjectSectionAnimation);
+
+// Also trigger animation when switching to projects section
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    setTimeout(() => {
+      handleProjectSectionAnimation();
+    }, 600);
+  });
+});
