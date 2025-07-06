@@ -14,7 +14,7 @@ function copyToClipboard(email) {
     alert('Email copied to clipboard: ' + email);
 }
 
-const pageOrder = ['home', 'about', 'projects', 'contact'];
+const pageOrder = ['home', 'about', 'projects', 'certifications', 'contact'];
 
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section[data-page]');
@@ -66,6 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
       }
     });
+  });
+
+  // Certificate image modal logic
+  const modal = document.getElementById('certificate-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalClose = document.querySelector('.modal-close');
+  document.querySelectorAll('.certificate-item img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
   });
 });
 

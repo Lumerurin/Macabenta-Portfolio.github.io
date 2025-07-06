@@ -15,6 +15,7 @@
         <li><a href="#" data-target="home" class="active">Home</a></li>
         <li><a href="#" data-target="about">About Me</a></li>
         <li><a href="#" data-target="projects">Projects</a></li>
+        <li><a href="#" data-target="certifications">Certifications</a></li>
         <li><a href="#" data-target="contact">Contact</a></li>
       </ul>
     </nav>
@@ -124,6 +125,32 @@
       </div>
     </div>
   </section>
+  <section id="certifications" class="certifications-section" data-page="certifications" style="display:none;">
+    <h2>Certifications</h2>
+    <div class="certifications-gallery">
+      <!-- Example certificate gallery item -->
+      <!--
+      <div class="certificate-item">
+        <img src="images/certificate1.png" alt="Certificate Title">
+        <div class="certificate-caption">
+          <h3>Certificate Title</h3>
+          <p>Issued by: Organization</p>
+          <p>Date: YYYY-MM-DD</p>
+        </div>
+      </div>
+      -->
+      <div class="certificate-item">
+        <img src="certificates\Excel 2019 Associate_page-0001.jpg" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
+        <div class="certificate-caption">
+          <h3>Microsoft Office Specialist: Excel 2019 Associate</h3>
+          <p>Issued by: Microsoft</p>
+          <p>Date: September 6, 2023</p>
+          <p>Credential ID: ETEn-uTLm</p>
+          </div>
+      </div>
+      <p style="color:#888;">No certificates added yet.</p>
+    </div>
+  </section>
   <section id="contact" class="contact-section" data-page="contact" style="display:none;">
     <h1>Contact Me</h1>
     <p>Feel free to connect with me on any of the platforms below!</p>
@@ -150,6 +177,11 @@
       </ul>
     </div>
   </section>
+  <!-- Modal for enlarged certificate image -->
+  <div id="certificate-modal" class="certificate-modal" style="display:none;">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img" src="" alt="Enlarged Certificate">
+  </div>
   <script src="javascript.js"></script>
 </body>
 </html>
