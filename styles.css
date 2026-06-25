@@ -225,8 +225,8 @@ a { color: inherit; }
   aspect-ratio: 16 / 10;
   display: flex;
 }
-.project-media img { width: 100%; height: 100%; object-fit: cover; }
-.project-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-media img { width: 100%; height: 100%; object-fit: contain; }
+.project-video { width: 100%; height: 100%; object-fit: contain; display: block; }
 .media-placeholder {
   width: 100%;
   display: flex;
