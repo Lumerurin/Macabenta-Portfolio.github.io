@@ -3,200 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mel John Macabenta Portfolio</title>
-  <link rel="icon" type="image/png" href="images/icon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Mel John Macabenta — Machine Learning & AI</title>
+
+  <!-- These help your site look good when shared on social media or in search. -->
+  <meta name="description" content="Mel John Macabenta — computer science graduate focused on retrieval-augmented generation and applied machine learning.">
+  <meta property="og:title" content="Mel John Macabenta — Machine Learning & AI">
+  <meta property="og:description" content="Portfolio of ML and AI work, including the AskWhiz RAG chatbot thesis.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon: drop a file at images/icon.png (or .ico) and adjust the type if needed. -->
+  <link rel="icon" type="image/png" href="images/icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#" data-target="home" class="active">Home</a></li>
-        <li><a href="#" data-target="about">About Me</a></li>
-        <li><a href="#" data-target="projects">Projects</a></li>
-        <li><a href="#" data-target="certifications">Certifications</a></li>
-        <li><a href="#" data-target="contact">Contact</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="wordmark">
+        <span class="wordmark-name">Mel John Macabenta</span>
+        <span class="wordmark-role">Machine learning &amp; AI</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#work" data-nav>Work</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#certifications" data-nav>Certifications</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+    </div>
   </header>
-  <section id="home" class="home-section" data-page="home">
-    <div class="home-content">
-      <div class="home-image">
-        <img src="images/placeholder.png" alt="computer">
-      </div>
-      <div class="home-text">
-        <h1>Welcome to My Digital Course Portfolio</h1>
-        <p>
-          Hi there! I’m Mel John Macabenta, and this is my course portfolio to share my projects, journey, 
-          and learnings. Explore my work and get to know more about me.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section id="about" class="about-section" data-page="about" style="display:none;">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-text">
-        <p>I am Mel John Macabenta, a computer science student in Mapua Malayan Colleges of Mindanao 
-            with a passion for cybersecurity and machine learning. Throughout my studies, I have developed a 
-            solid foundation in programming languages such as Python, Java, and C#, along with an understanding of data structures, 
-            databases, and software development.</p>
-        <p>This portfolio showcases my projects, skills, and accomplishments as I continue to grow and explore 
-            the exciting world of computer science. Thank you for visiting!</p>
-      </div>
-      <div class="about-image">
-        <img src="images/Mapua Logo.png" alt="Mapua">
-      </div>
-    </div>
-  </section>
-  <section id="projects" class="projects-section" data-page="projects" style="display:none;">
-    <div class="project">
-      <h2>Lyla’s: Smart Inventory & Sales</h2>
-      <div class="project-content">
-        <div class="project-description">
-          <h3>Background</h3>
-          <p>This system was developed for Lyla’s Cakes, Pastries, & Breads to automate sales, inventory, and transaction management.</p>
-          <h3>Solution</h3>
-          <p>We created a smart, user-friendly platform to streamline operations, enhance accuracy, and improve efficiency.</p>
-          <a href="https://github.com/Lumerurin/Lylas-Smart-Inventory-Sales" target="_blank" class="download-button">Visit Repo</a>
-        </div>
-        <div class="project-video">
-          <video autoplay loop muted>
-            <source src="images/lylas-project.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+
+  <main id="main">
+
+    <!-- ====== HERO ======
+         You can edit this text directly. It's bespoke copy, so it lives here
+         rather than in data.js. -->
+    <section id="home" class="hero wrap">
+      <div class="hero-text">
+        <p class="eyebrow">Hi, I'm Mel —</p>
+        <h1 class="hero-title">I build AI systems that turn institutional knowledge into reliable answers.</h1>
+        <p class="hero-lede">A computer science graduate from Mapúa Malayan Colleges Mindanao, focused on retrieval-augmented generation and applied machine learning. I like the problems where careful evaluation meets something people can actually use.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
       </div>
+      <div class="hero-portrait">
+        <!-- Optional: drop a photo at images/portrait.jpg. Until then, a placeholder shows. -->
+        <img src="images/portrait.jpg" alt="Portrait of Mel John Macabenta" data-fallback="portrait">
+      </div>
+    </section>
+
+    <!-- ====== WORK (rendered from data.js) ====== -->
+    <section id="work" class="section wrap">
+      <header class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2 class="section-title underline">Projects</h2>
+      </header>
+      <div id="work-grid" class="work-grid"></div>
+    </section>
+
+    <!-- ====== ABOUT ======
+         Edit this text directly too. -->
+    <section id="about" class="section wrap about">
+      <header class="section-head">
+        <p class="eyebrow">A little context</p>
+        <h2 class="section-title underline">About</h2>
+      </header>
+      <div class="about-body">
+        <p>I'm Mel John Macabenta, a computer science graduate drawn to the practical side of machine learning and AI — building systems, measuring whether they actually work, and shipping the ones that do.</p>
+        <p>My undergraduate thesis put nine retrieval-augmented generation configurations through a structured evaluation to find the most reliable setup for an institutional chatbot. The rest of my work spans chatbots, inventory systems, and the occasional game. Across all of it, I care about software that's accurate, usable, and honest about its limits.</p>
+      </div>
+    </section>
+
+    <!-- ====== CERTIFICATIONS & BADGES (rendered from data.js) ====== -->
+    <section id="certifications" class="section wrap">
+      <header class="section-head">
+        <p class="eyebrow">Verified credentials</p>
+        <h2 class="section-title underline">Certifications &amp; badges</h2>
+      </header>
+      <div id="cert-grid" class="cert-grid"></div>
+    </section>
+
+    <!-- ====== CONTACT (links rendered from data.js) ====== -->
+    <section id="contact" class="section wrap contact">
+      <header class="section-head">
+        <p class="eyebrow">Say hello</p>
+        <h2 class="section-title underline">Contact</h2>
+      </header>
+      <p class="contact-lede">I'm open to roles and collaborations in ML and AI. The quickest ways to reach me are below.</p>
+      <ul id="contact-links" class="contact-links"></ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Mel John Macabenta</p>
     </div>
-    <div class="project">
-      <h2>Bike Shop Inventory Management System</h2>
-      <div class="project-content">
-        <div class="project-description">
-          <h3>Background</h3>
-          <p>This program was developed for Jolen’s Bike Shop to streamline inventory management and operations.</p>
-          <h3>Solution</h3>
-          <p>We designed a user-friendly system with a simple interface to help the client manage inventory with ease.</p>
-          <a href="https://github.com/MeruMeru09/BikeShopManagement.git" target="_blank" class="download-button">Download Project</a>
-        </div>
-        <div class="project-video">
-          <video autoplay loop muted>
-            <source src="images/BikeShopManagement.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="project">
-      <h2>Admission Chatbot for Mapúa Malayan Colleges Mindanao</h2>
-      <div class="project-content">
-        <div class="project-description">
-          <h3>Background</h3>
-          <p>This program was developed for Mapua Malayan Colleges Mindanao to help students with queries regarding admission-related questions.</p>
-          <h3>Solution</h3>
-          <p> This web-hosted GUI application is designed to assist prospective students with their admission queries 
-            and provide a user-friendly experience.</p>
-          <a href="https://margatron-admissionbuddy754.streamlit.app/" target="_blank" class="download-button">Visit Website</a>
-        </div>
-        <div class="project-video">
-          <video autoplay loop muted>
-            <source src="images/Margatron.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="project">
-      <h2>Purrfect Hit</h2>
-      <div class="project-content">
-        <div class="project-description">
-          <h3>Background</h3>
-          <p>This program was developed to help improve hand-eye coordination and reaction time by engaging users in a fast-paced interactive challenge.</p>
-          <h3>Solution</h3>
-          <p>I developed a fun and upbeat Python game designed to enhance hand-eye coordination and reaction time.</p>
-          <a href="https://github.com/Lumerurin/Purr-fect-Hit.git" target="_blank" class="download-button">Download Project</a>
-        </div>
-        <div class="project-video">
-          <video autoplay loop muted>
-            <source src="images/Purrfect hit.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="certifications" class="certifications-section" data-page="certifications" style="display:none;">
-    <h2>Certifications</h2>
-    <div class="certifications-gallery">
-      <div class="certificate-item">
-        <img src="certificates\Excel 2019 Associate_page-0001.jpg" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
-        <div class="certificate-caption">
-          <h3>Microsoft Office Specialist: Excel 2019 Associate</h3>
-          </div>
-      </div>
-      <div class="certificate-item">
-        <img src="certificates\Coursera Build Wireframes and Low-Fidelity Prototypes-1.png" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
-        <div class="certificate-caption">
-          <h3>Coursera Build Wireframes and Low-Fidelity Prototypes</h3>
-          </div>
-      </div>
-      <div class="certificate-item">
-        <img src="certificates\Coursera Conduct UX Research and Test Early Concepts-1.png" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
-        <div class="certificate-caption">
-          <h3>Coursera Conduct UX Research and Test Early Concepts</h3>
-          </div>
-      </div>
-      <div class="certificate-item">
-        <img src="certificates\Coursera Create High-Fidelity Designs and Prototypes in Figma-1.png" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
-        <div class="certificate-caption">
-          <h3>Coursera Create High-Fidelity Designs and Prototypes in Figma</h3>
-          </div>
-      </div>
-      <div class="certificate-item">
-        <img src="certificates\Coursera Foundations of User Experience (UX) Design-1.png" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
-        <div class="certificate-caption">
-          <h3>Coursera Foundations of User Experience (UX) Design</h3>
-          </div>
-      </div>
-      <div class="certificate-item">
-        <img src="certificates\Coursera Start the UX Design Process Empathize, Define, and Ideate-1.png" alt="Microsoft Office Specialist Excel 2019 Associate" class="certificate-image" onclick="openModal(this.src, 'Microsoft Office Specialist: Excel 2019 Associate', 'Microsoft', 'September 6, 2023', 'ETEn-uTLm')">
-        <div class="certificate-caption">
-          <h3>Coursera Start the UX Design Process Empathize, Define, and Ideate</h3>
-          </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact-section" data-page="contact" style="display:none;">
-    <h1>Contact Me</h1>
-    <p>Feel free to connect with me on any of the platforms below!</p>
-    <div class="social-media">
-      <ul>
-        <li>
-          <a href="https://github.com/Lumerurin" target="_blank" class="social-link">
-            <img src="images/github.png" alt="GitHub" class="social-icon">
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/mel-john-macabenta-43a6a1266/" target="_blank" class="social-link">
-            <img src="images/linkedin-blue-logo-icon.png" alt="LinkedIn" class="social-icon">
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="#" onclick="copyToClipboard('meljohnmacabenta@gmail.com');" class="social-link">
-            <img src="images/Gmail-logo-png-icon-900x675.png" alt="Email" class="social-icon">
-            Email
-          </a>
-        </li>        
-      </ul>
-    </div>
-  </section>
-  <!-- Modal for enlarged certificate image -->
-  <div id="certificate-modal" class="certificate-modal" style="display:none;">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modal-img" src="" alt="Enlarged Certificate">
+  </footer>
+
+  <!-- Modal for enlarged certificate images -->
+  <div id="img-modal" class="img-modal" hidden>
+    <button class="modal-close" aria-label="Close image">&times;</button>
+    <img id="modal-img" src="" alt="">
   </div>
-  <script src="javascript.js"></script>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
