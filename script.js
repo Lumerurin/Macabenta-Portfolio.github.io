@@ -89,20 +89,18 @@
         : `<span class="cert-icon ${iconKey}">${ICONS[iconKey]}</span>`;
 
       const verify = hasValue(c.verify)
-        ? `<a class="cert-verify" href="${esc(c.verify)}" target="_blank" rel="noopener">Verify →</a>`
+        ? `<a class="cert-verify" href="${esc(c.verify)}" target="_blank" rel="noopener">verify ↗</a>`
         : "";
 
       return `<article class="cert-card reveal">
-        <div class="cert-top">
-          ${top}
-          <div class="cert-info">
-            <h3>${esc(c.title)}</h3>
-            <p class="cert-meta">${esc(c.issuer || "")}${c.date ? " · " + esc(c.date) : ""}</p>
+        <div class="cert-media">${top}</div>
+        <div class="cert-body">
+          <h3>${esc(c.title)}</h3>
+          <p class="cert-meta">${esc(c.issuer || "")}${c.date ? " · " + esc(c.date) : ""}</p>
+          <div class="cert-foot">
+            <span class="cert-type">${typeLabel}</span>
+            ${verify}
           </div>
-        </div>
-        <div class="cert-foot">
-          <span class="cert-type">${typeLabel}</span>
-          ${verify}
         </div>
       </article>`;
     }).join("");
